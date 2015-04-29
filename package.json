@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/frenchie4111/require-absolute/issues"
   },
-  "homepage": "https://github.com/frenchie4111/require-absolute"
+  "homepage": "https://github.com/frenchie4111/require-absolute",
+  "dependencies": {
+    "absolute": "0.0.1",
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4",
+    "mocha-directory": "^1.0.0"
+  }
 }
