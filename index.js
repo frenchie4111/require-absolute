@@ -17,7 +17,13 @@
      */
     module.exports = function( absolute_path ) {
         if( !absolute( absolute_path ) ) throw new Error( 'Requires absolute path' );
-        var relative = path.resolve( './', path.relative( __dirname, absolute_path ) );
+
+        var relative = path.relative( __dirname, absolute_path );
+
+        if( relative.charAt( 0 ) !== '.' ) {
+            relative = path.resolve( './', relative );
+        }
+
         return require( relative );
     };
 })();
